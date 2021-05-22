@@ -452,7 +452,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    250
+                    244
                 </div>
                 
 
@@ -477,7 +477,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>证明：<br>$f(tx,ty)=t^{2}f(x,y)$两边同时对t求导并令t=1得：<br>$xf_{x}+yf_{y}=2f(x,y)$; &nbsp;&nbsp;&nbsp;($f_{x}表示f(x,y)对x的一阶偏导$)<br>$gradf(x,y)=(f_{x},f_{y})$;<br>$div(f_{x},f_{y})=f_{xx}+f_{yy}$;&nbsp;&nbsp;&nbsp; ($f_{xx}表示f(x,y)对x的二阶偏导$)<br>三角换元求出有向曲线上任一点处的单位切向量<br>取逆时针为正方向,则有<br>$$令\begin{cases}<br>x=2\cos t\<br>y=2\sin t\<br>\end{cases}(t\in(0,2\pi))\Rightarrow切向量:(-2\sin t,2\cos t)\Rightarrow单位切向量:(-\frac{y}{2},\frac{x}{2});<br>$$<br>$$<br>\cos\alpha=\frac{y}{2},\cos\beta=-\frac{x}{2}\  (考虑有向)<br>$$<br>$$<br>\oint_Lf(x,y)ds=\int_L(P\cos\alpha+Q\cos\beta)ds=\int_L(Pdx+Qdy);<br>$$<br>又因为<br>$$<br>\oint_Lf(x,y)ds=\int_L(f_x\frac{x}{2}+f_y\frac{y}{2})ds;<br>$$<br>令<br>$$<br>P=-f_y,Q=f_x<br>$$<br>由格林公式得：<br>$$<br>\oint_Lf(x,y)ds=\int_L(-f_ydx+f_xdy)=\iint_D(f_{xx}+f_{yy})d\sigma=\iint_Ddiv(gradf(x,y))d\sigma;<br>$$<br>得证！<br>码这篇证明主要为了练习markdown书写语法和熟悉mathjax公式。</p>
+                <p>证明：<br>$f(tx,ty)=t^{2}f(x,y)$两边同时对t求导并令t=1得：  </p>
+<p>$xf_{x}+yf_{y}=2f(x,y)$;<br>$f_{x}表示f(x,y)对x的一阶偏导$</p>
+<p>$gradf(x,y)=(f_{x},f_{y})$;  </p>
+<p>$div(f_{x},f_{y})=f_{xx}+f_{yy}$;<br>$f_{xx}表示f(x,y)对x的二阶偏导$ </p>
+<p>三角换元求出有向曲线上任一点处的单位切向量<br>取逆时针为正方向,则有  </p>
+<script type="math/tex; mode=display">令\begin{cases}
+x=2\cos t\\
+y=2\sin t\\
+\end{cases}(t\in(0,2\pi))\Rightarrow切向量:(-2\sin t,2\cos t)\Rightarrow单位切向量:(-\frac{y}{2},\frac{x}{2});</script><script type="math/tex; mode=display">
+\cos\alpha=\frac{y}{2},\cos\beta=-\frac{x}{2}\  (考虑有向)</script><script type="math/tex; mode=display">
+\oint_Lf(x,y)ds=\int_L(P\cos\alpha+Q\cos\beta)ds=\int_L(Pdx+Qdy);</script><p>又因为  </p>
+<script type="math/tex; mode=display">
+\oint_Lf(x,y)ds=\int_L(f_x\frac{x}{2}+f_y\frac{y}{2})ds;</script><p>令  </p>
+<script type="math/tex; mode=display">
+P=-f_y,Q=f_x</script><p>由格林公式得： </p>
+<script type="math/tex; mode=display">
+\oint_Lf(x,y)ds=\int_L(-f_ydx+f_xdy)=\iint_D(f_{xx}+f_{yy})d\sigma=\iint_Ddiv(gradf(x,y))d\sigma;</script><p>得证！  </p>
+<p>码这篇证明主要为了练习markdown书写语法和熟悉mathjax公式。</p>
 
                 
             </div>
