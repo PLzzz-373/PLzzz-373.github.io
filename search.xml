@@ -17,11 +17,30 @@
     
     
     <entry>
-      <title>Mogic Region 题解</title>
-      <link href="2021/05/21/mogic-regin-ti-jie/"/>
-      <url>2021/05/21/mogic-regin-ti-jie/</url>
+      <title>虚假的Mogic Region 题解</title>
+      <link href="2021/05/21/xu-jia-de-mogic-regin-ti-jie/"/>
+      <url>2021/05/21/xu-jia-de-mogic-regin-ti-jie/</url>
       
-        <content type="html"><![CDATA[<h1 id="Mogic-Region-题解"><a href="#Mogic-Region-题解" class="headerlink" title="Mogic Region 题解"></a>Mogic Region 题解</h1><h2 id="消失的水题"><a href="#消失的水题" class="headerlink" title="消失的水题"></a>消失的水题</h2><p>测试一下<br>这几天学校OJ登不上去，题目都找不到了。。。  </p><h2 id="凑字数的数学题"><a href="#凑字数的数学题" class="headerlink" title="凑字数的数学题"></a>凑字数的数学题</h2><p>那就欣赏一道美丽的数学题吧~<br>设$f(x)$为具有二阶连续偏导数的二次齐次函数，即对任何$x,y,t$均成立：<br>$f(tx,ty)=t^{2}f(x,y)$,设$D$是由$L:x^{2}+y^{2}=4$所围成的闭区域，求证：  </p><script type="math/tex; mode=display">\oint_{L}f(x,y)ds=\iint_{D}div(gradf(x,y))d\sigma</script><p>$grad$表示梯度，$div$表示散度</p><p>题解:<br><a href="https://guguguhao.com/2021/05/22/shu-xue-ti-jie/">数学题解</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="虚假的-Mogic-Region-题解"><a href="#虚假的-Mogic-Region-题解" class="headerlink" title="(虚假的)Mogic Region 题解"></a>(虚假的)Mogic Region 题解</h1><h2 id="消失的水题"><a href="#消失的水题" class="headerlink" title="消失的水题"></a>消失的水题</h2><p>测试一下<br>这几天学校OJ登不上去，题目都找不到了。。。<br>(原来修好之后只能用校内VPN访问了)</p><h2 id="凑字数的数学题"><a href="#凑字数的数学题" class="headerlink" title="凑字数的数学题"></a>凑字数的数学题</h2><p>那就欣赏一道美丽的数学题吧~<br>设$f(x)$为具有二阶连续偏导数的二次齐次函数，即对任何$x,y,t$均成立：<br>$f(tx,ty)=t^{2}f(x,y)$,设$D$是由$L:x^{2}+y^{2}=4$所围成的闭区域，求证：  </p><script type="math/tex; mode=display">\oint_{L}f(x,y)ds=\iint_{D}div(gradf(x,y))d\sigma</script><p>$grad$表示梯度，$div$表示散度</p><p>题解:<br><a href="https://guguguhao.com/2021/05/22/shu-xue-ti-jie/">数学题解</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 数学题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>真·Mogic Region 题解</title>
+      <link href="2021/05/21/zhen-mogic-regin-ti-jie/"/>
+      <url>2021/05/21/zhen-mogic-regin-ti-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mogic-Region-题解"><a href="#Mogic-Region-题解" class="headerlink" title="Mogic Region 题解"></a>Mogic Region 题解</h1><h2 id="有趣的题目"><a href="#有趣的题目" class="headerlink" title="有趣的题目"></a>有趣的题目</h2><p>在一块名叫 Mogician Region 的土地上，有一群神秘的人，他们自称为 Mogician 。他们追随着一位年长的先行者：他会弹 Hawaii 吉他，也能和大洋彼岸的新闻工作者谈笑风生；他为青年人捉急啊、真的，也会传授一点人生的小技巧；他的老师在地上画了一个圈，一座 Mogic Tower 便拔地而起。 Mogician 的故事，便从这座 Mogic Tower 开始：</p><p>你和一位年轻的 Mogician 为了探寻这座 Mogic Tower 的秘密，凭借着跑的飞快的特长，先于大洋彼岸的 Mogicians 一步进入了这座 Tower 。你们希望通过这一次探险，搞出一个大 Mogic ！但是这位 Mogician 在破解 Mogic 阵列的时候，因为知识水平有待提高，所以不慎落入陷阱，你们被困在这里，整个 Tower 里的扩音器都在重复播放 “You naïve” 。好在，你从小就喜欢背古诗，在情急之下情不自禁地背诵了那首诗。没想到，你一个普通的 Mogician ，居然被传送到整座建筑的核心部分了！你离解开一切的秘密只差最后一步：</p><p>你面前有四块石板，上面各有一行字，分别是：</p><p>1.”Humans! They have no idea of their fates!”</p><p>2.”I was ashamed to have done such minor work.”</p><p>3.”It depends on your struggle, but the process of the history matters as well.”</p><p>4.”We have dicided. You’d come.”</p><p>你明白了，这是时间 MOGIC 的咒语。看样子为了掌握这样的 MOGIC，你要将他们按照时间排成正确的顺序。这怎么难得倒身经百战见得多了的你呢？你提了提裤腰带，心中已有了答案。<br><img src="/images/lena.png" alt="Lena"><br>首A本题的选手+1s。(这可是重中之重)<br>题目来源:TSOJ</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>相信你还没读完题目就会发现这是一道水题了。<br>这四句英文非常好懂，<del>初中水平</del>就能翻译出来，然后题目要求给这四句话排序，接下来就得理解上下文了。于是你读完了题目，发现都写的什么狗屁，根本读不懂，你感觉这是某个梗（确实是），你并不了解，于是你骂骂咧咧地枚举完了4！种情况（也许不用），A掉了此题，才发现题目尾部的奖励。你感觉自己错失了什么，但却无可奈何，那么这到底是什么意思呢？  </p><p><strong>为了保全我的网站，我只能告诉你</strong><del>无可奉告</del>  </p><p>你需要一个梯子，翻墙，然后Google一下膜蛤文化。<br>现在你已经了解了膜蛤文化了，成为了蛤的膜拜者，你着急啊，急着提升自己的知识水平。<strong>别急！</strong><br>身经百战的我送了你一段缺少了关键词的话： </p><p>那么人呐就都不知道，自己就不可以预料。你一个人的命运啊，当然要靠自我奋斗，但是也要考虑到历史的行程，我绝对不知道，我作为一个上海市委##怎么把我选到北京去了，所以##同志跟我讲话，说「##都决定啦，你来当##」，我说另请高明吧。……很惭愧，只做了一点微小的工作，谢谢大家！</p><p>现在，你可以用其他账号首A此题，获得宝贵的1s。至于你还想了解什么，我只能说<strong>无可奉告</strong>！！！</p><p>最后祝大家阖家欢落，生活育快，不断提高自己的知识水平。</p>]]></content>
       
       
       
