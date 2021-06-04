@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>扫雷</title>
+      <link href="2021/06/04/sao-lei/"/>
+      <url>2021/06/04/sao-lei/</url>
+      
+        <content type="html"><![CDATA[<h1 id="扫雷"><a href="#扫雷" class="headerlink" title="扫雷"></a>扫雷</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://www.luogu.com.cn/problem/P4961">洛谷P4961</a><br>dfs入门题</p><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> dfs </tag>
+            
+            <tag> 模拟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>高逐位整除数</title>
       <link href="2021/06/03/post-gao-zhu-wei-zheng-chu-shu/"/>
       <url>2021/06/03/post-gao-zhu-wei-zheng-chu-shu/</url>

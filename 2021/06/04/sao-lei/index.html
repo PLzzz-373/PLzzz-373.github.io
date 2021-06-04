@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="高逐位整除数, 平的地球">
+    <meta name="keywords" content="扫雷, 平的地球">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>高逐位整除数 | 平的地球</title>
+    <title>扫雷 | 平的地球</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">高逐位整除数</h1>
+                    <h1 class="description center-align post-title">扫雷</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,8 @@
                                 <span class="chip bg-color">dfs</span>
                             </a>
                         
-                            <a href="/tags/LevOJ-P1468/">
-                                <span class="chip bg-color">LevOJ P1468</span>
+                            <a href="/tags/%E6%A8%A1%E6%8B%9F/">
+                                <span class="chip bg-color">模拟</span>
                             </a>
                         
                     </div>
@@ -451,7 +451,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-03
+                    2021-06-04
                 </div>
                 
 
@@ -460,7 +460,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    511
+                    10
                 </div>
                 
 
@@ -485,55 +485,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="高逐位整除数"><a href="#高逐位整除数" class="headerlink" title="高逐位整除数"></a>高逐位整除数</h1><p><img src="QQ截图20210603201828.png" alt="题目"></p>
-<h2 id="题目解释"><a href="#题目解释" class="headerlink" title="题目解释"></a>题目解释</h2><p>给定你一个位数，让你求出所有符合定义的数。例如 123 是三位数，从左往右，前一位是1（能被1整除），前两位是12（能被2整除），前三位是123（能被3整除）。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>最近在正好在学<a target="_blank" rel="noopener" href="https://oi-wiki.org/search/dfs/">dfs</a>，这题按照题意去模拟，最朴素的就是逐位去判断前i位能不能被i整除，这不就是搜索吗。</p>
-<h2 id="细节考虑"><a href="#细节考虑" class="headerlink" title="细节考虑"></a>细节考虑</h2><p>这题的位数范围是1到24，已经超出long long（$2^{64}$是20位） 如果要判断前21位数,那么会爆long long，不过可以用模运算的性质，边乘边取余数。<br>或者直接打表。</p>
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><pre class="line-numbers language-#include<iostream>" data-language="#include<iostream>"><code class="language-#include<iostream>">using namespace std;
-typedef long long ll;
-int n;
-int a[25];&#x2F;&#x2F;存每一位的数字
-void dfs(int m)&#123;
-        if(m&#x3D;&#x3D;n+1)&#123;&#x2F;&#x2F;当搜索位数达到给定位数，停止搜索，输出结果
-            for (int i &#x3D; 1; i &lt;&#x3D; n;i++)&#123;
-            if(!a[1])&#x2F;&#x2F;首位不能是0
-                continue;
-                cout &lt;&lt; a[i];
-            &#125;
-            if(a[1])
-            cout &lt;&lt; endl;
-            return;
-        &#125;
-        for (int i &#x3D; 0; i &lt;&#x3D; 9;i++)&#123;
-            ll temp &#x3D; 0;
-            for (int j &#x3D; 1; j &lt;&#x3D; m-1;j++)&#123;
-                temp &#x3D; (temp * 10)%m + a[j];&#x2F;&#x2F;防止爆long long
-                temp %&#x3D; m;
-            &#125;
-            &#x2F;&#x2F;(a+b)%c等价于 (a+b%c)%c
-            temp &#x3D; (temp * 10)%m + i;&#x2F;&#x2F;加上第i位的数字
-            if (temp % m &#x3D;&#x3D; 0)&#x2F;&#x2F;如果可以被前m位整除，那么存入数组，继续搜索
-            &#123;
-                a[m] &#x3D; i;
-                dfs(m + 1);
-                &#125;
-        &#125;
-&#125;
-int main()&#123;
-    while(cin&gt;&gt;n)&#123;
-        if(n&lt;24)
-        dfs(1);
-        &#x2F;&#x2F;被卡超时了，把样例打表输出。。。
-        else&#123;
-            cout &lt;&lt; &quot;144408645048225636603816&quot; &lt;&lt; endl;
-            cout &lt;&lt; &quot;360852885036840078603672&quot; &lt;&lt; endl;
-            cout &lt;&lt; &quot;402852168072900828009216&quot; &lt;&lt; endl;
-        &#125;
-    &#125;
-    return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这应该是我的第一篇正经题解，虽然题目很水，没有什么思维难度。但是可以来记录记录学习算法的过程，以便巩固。<br><img src="QQ截图20210603205159.png" alt="服了"><br>居然超了1ms，我佛。我还是太菜了，哎。</p>
-
+                <h1 id="扫雷"><a href="#扫雷" class="headerlink" title="扫雷"></a>扫雷</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4961">洛谷P4961</a><br>dfs入门题</p>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>
                 
             </div>
             <hr/>
@@ -559,7 +512,7 @@ int main()&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://plzzz-373.github.io/2021/06/03/post-gao-zhu-wei-zheng-chu-shu/">http://plzzz-373.github.io/2021/06/03/post-gao-zhu-wei-zheng-chu-shu/</a>
+                    <a href="http://plzzz-373.github.io/2021/06/04/sao-lei/">http://plzzz-373.github.io/2021/06/04/sao-lei/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -601,8 +554,8 @@ int main()&#123;
                                     <span class="chip bg-color">dfs</span>
                                 </a>
                             
-                                <a href="/tags/LevOJ-P1468/">
-                                    <span class="chip bg-color">LevOJ P1468</span>
+                                <a href="/tags/%E6%A8%A1%E6%8B%9F/">
+                                    <span class="chip bg-color">模拟</span>
                                 </a>
                             
                         </div>
@@ -1035,9 +988,10 @@ int main()&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/06/04/sao-lei/">
                     <div class="card-image">
@@ -1055,9 +1009,9 @@ int main()&#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1066,6 +1020,7 @@ int main()&#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1088,13 +1043,13 @@ int main()&#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/01/shen-yuan/">
+                <a href="/2021/06/03/post-gao-zhu-wei-zheng-chu-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt=".......">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="高逐位整除数">
                         
-                        <span class="card-title">.......</span>
+                        <span class="card-title">高逐位整除数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1105,7 +1060,7 @@ int main()&#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-03
                             </span>
                         <span class="publish-author">
                             
@@ -1114,6 +1069,18 @@ int main()&#123;
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/dfs/">
+                        <span class="chip bg-color">dfs</span>
+                    </a>
+                    
+                    <a href="/tags/LevOJ-P1468/">
+                        <span class="chip bg-color">LevOJ P1468</span>
+                    </a>
+                    
                 </div>
                 
             </div>
